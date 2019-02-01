@@ -52,11 +52,16 @@ def make_contest_dir(contest_name, contest_num, question):
         print("Made directory {}".format(contest_path))
         print("--- structure ---")
         print(contest_path + "/")
-        for i in os.listdir(contest_path):
-            print(i)
+
+        files = os.listdir(contest_path)
+
+        for i in files:
+            if i == files[-1]:
+                print(" └─ " + i)
+            else:
+                print(" ├─ " + i)
 
 
 if __name__ == '__main__':
     name, num, ques = input().split(" ")
-
     make_contest_dir(name, num, ques)
