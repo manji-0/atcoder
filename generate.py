@@ -41,11 +41,12 @@ def make_contest_dir(contest_name, contest_num, question):
 
     
     with open("template.cpp", "r", encoding="utf-8") as template:
+        text = template.read()
         for exe in executable:
             with open("{}/{}.cpp".format(contest_path, exe),
                       "w", encoding="utf-8") as cpp_file:
-                cpp_file.write("// {}".format(exe))
-                cpp_file.write(template.read())
+                cpp_file.write("// {}\n".format(exe))
+                cpp_file.write(text)
                 
     # print directory structure
     if flag:
