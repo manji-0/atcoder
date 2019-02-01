@@ -33,7 +33,7 @@ def make_contest_dir(contest_name, contest_num, question):
             "project({}_{})\n".format(contest_name, contest_num),
             "set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)\n",
             "\n"]
-    executable = ["{}{}_{}".format(contest_name, contest_num, q) for q in question]  # ex) ABC104_C
+    executable = ["{}{}_{}_{}".format(contest_name, contest_num, str(index + 1), q) for index, q in enumerate(question)]  # ex) ABC104_C
     text_list = ["add_executable({0} {0}.cpp)\n".format(exe) for exe in executable]
     output = head + text_list  # CMakeLists.txt に書き込むリスト
     with open("{}/CMakeLists.txt".format(contest_path), "w", encoding="utf-8") as file:
