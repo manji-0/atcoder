@@ -1,4 +1,6 @@
 #!/usr/local/bin/python3
+# I referred to this article:
+# https://pyteyon.hatenablog.com/entry/2018/08/25/202908
 
 import os
 
