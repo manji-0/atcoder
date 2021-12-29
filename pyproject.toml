@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "atcoder"
+version = "0.1.0"
+description = ""
+authors = ["Wataru Manji <manji@linux.com>"]
+
+[tool.poetry.dependencies]
+python = "==3.9.7"
+numpy = "^1.20"
+scipy = "^1.7.3"
+scikit-learn = "^1.0.1"
+networkx = "^2.6.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
