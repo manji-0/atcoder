@@ -21,7 +21,7 @@
 		"prefix": "init",
 		"body": [
 			"def main():",
-			"    print(res)",
+			"    N = ",
 			"",
 			"if __name__ == '__main__':",
 			"    main()",
@@ -40,6 +40,21 @@
 		"prefix": "rep",
 		"body": [
 			"for _ in range($1):"
+		]
+	},
+	"binsearch": {
+		"scope": "python",
+		"prefix": "binsearch",
+		"body": [
+			"ma = ",
+			"mi = ",
+			"",
+			"while (ma-mi) > 1:",
+			"	mid = (ma+mi)//2",
+			"	if hoge:",
+			"		ma = mid",
+			"	else:",
+			"		mi = mid"
 		]
 	}
 }
