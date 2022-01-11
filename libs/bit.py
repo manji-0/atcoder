@@ -26,3 +26,23 @@ class BIT:
             return self.el[i]
 
         return self.sum(j) - self.sum(i)
+
+    def lower_bound(self, w):
+        if w <= 0:
+            return 0
+
+        x = 0
+        r = 1
+
+        while (r < self.n):
+            r << 1
+
+        l = r
+
+        while l > 0:
+            if x + l < self.n and self.data[x+l] < w:
+                w -= self.data[x+l]
+                x += l
+                l >> 1
+        
+        return x + l
