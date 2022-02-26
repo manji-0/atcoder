@@ -9,10 +9,10 @@ def main():
         for p2 in P[i+1:]:
             ma = max(ma, l(p1,p2))
 
-    print(ma)
+    print(ma**(1/2))
 
 def l(p1, p2):
-    return ((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)**(1/2)
+    return ((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)
 
 if __name__ == '__main__':
     main()

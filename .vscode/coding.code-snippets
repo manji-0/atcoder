@@ -1,30 +1,14 @@
 {
-	// Place your atcoder ワークスペース snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-
 	"py-template": {
 		"scope": "python",
 		"prefix": "init",
 		"body": [
 			"def main():",
-			"    N = ",
+			"    N = int(input())",
+			"    A = [ int(i) for i in input().split() ]",
 			"",
-			"if __name__ == '__main__':",
-			"    main()",
+			"main()",
+			"#print(main())",
 			""
 		]
 	},
@@ -46,15 +30,15 @@
 		"scope": "python",
 		"prefix": "binsearch",
 		"body": [
-			"ma = ",
-			"mi = ",
+			"ok = 0",
+			"ng = N+1",
 			"",
-			"while (ma-mi) > 1:",
-			"	mid = (ma+mi)//2",
-			"	if hoge:",
-			"		ma = mid",
+			"while abs(ok-ng) > 1:",
+			"	mid = (ok+ng)//2",
+			"	if isOK():",
+			"		ok = mid",
 			"	else:",
-			"		mi = mid"
+			"		ng = mid"
 		]
 	}
 }

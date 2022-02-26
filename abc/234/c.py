@@ -1,7 +1,7 @@
 def main():
     K = int(input())
 
-    bK = list(bin(K)[2:].lstrip("0"))
+    bK = list(format(K, 'b'))
 
     ans = []
 

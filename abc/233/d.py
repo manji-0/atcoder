@@ -11,15 +11,17 @@ def main():
     for i in range(N):
         As.append(As[i] + A[i])
 
-    print(As)
-
     res = 0
-    mp = defaultdict(int)
 
-    for r in range(1, N+1):
-        mp[As[r-1]] += 1
-        res += mp[As[r]-K]
-        print(mp)
+    l = 0
+    r = 1
+
+    for l in range(0, N-1):
+        for r in range(l+1, N):
+            t = As[r] - As[l]
+
+            if t == K:
+                res += 1
 
     print(res)
 

@@ -1,4 +1,3 @@
-import heapq
 
 class BIT:
     def __init__(self, n):
@@ -57,7 +56,6 @@ def main():
 
     for k in P[:K]:
         B.add(N-k+1, 1)
-
 
     for k in P[K:]:
         ma = N+2
