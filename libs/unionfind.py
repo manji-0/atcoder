@@ -1,11 +1,11 @@
 class UnionFind:
     def __init__(self, n):
-        self.n = n
-        self.root = [0] + [-1]*n
-        self.rnk = [0]*(n+1)
+        self.__n = n
+        self.root = [0] + [-1] * n
+        self.rnk = [0] * (n + 1)
 
     def find_root(self, x):
-        if(self.root[x] < 0):
+        if self.root[x] < 0:
             return x
         else:
             self.root[x] = self.find_root(self.root[x])
@@ -15,17 +15,17 @@ class UnionFind:
         x = self.find_root(x)
         y = self.find_root(y)
 
-        if(x == y):
+        if x == y:
             return
 
-        elif(self.rnk[x] > self.rnk[y]):
+        elif self.rnk[x] > self.rnk[y]:
             self.root[x] += self.root[y]
             self.root[y] = x
 
         else:
             self.root[y] += self.root[x]
             self.root[x] = y
-            if(self.rnk[x] == self.rnk[y]):
+            if self.rnk[x] == self.rnk[y]:
                 self.rnk[y] += 1
 
     def is_same_root(self, x, y):
@@ -35,4 +35,4 @@ class UnionFind:
         return -self.root[self.find_root(x)]
 
     def __len__(self):
-        return len([ i for i in self.root if i < 0 ])
+        return len([i for i in self.root if i < 0])
